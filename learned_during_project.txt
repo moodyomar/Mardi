@@ -1,0 +1,25 @@
+/* CSS Learned during project :
+ here I will list everything new I learned during the project
+in the code will it will be a symbol that lead to here.
+example :  LNT1 , LNT2 , LNT3 ... = Learned New Thing
+
+LNT1 = @keyframes - making an animation by giving a CSS proerty animation: keyframes name 5s(time) infinite;
+LNT2 = 
+LNT3 =
+*/
+
+
+
+
+
+// Javascript Learned during project :
+/* here I will list everything new I learned during the project
+in the code will it will be a symbol that lead to here.
+example :  LNT1 , LNT2 , LNT3 ... = Learned New Thing
+
+LNT1 = toggle method , add a class if it doesnt exist , remove it if it is.
+
+LNT2 = 
+
+LNT3 =
+*/

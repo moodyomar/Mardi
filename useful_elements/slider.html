@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        @keyframes slidy {
+            0% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+
+
+        #slider {
+            overflow: hidden;
+        }
+
+        #slider figure img {
+            width: 20%;
+            min-height: 300px;
+            max-height: 600px;
+            float: left;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            animation: 15s slidy infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="slider">
+        <figure>
+            <img src="/images/site_images/img1.jpg" alt>
+            <img src="/images/site_images/img2.jpg" alt>
+            <img src="/images/site_images/img4.jpg" alt>
+            <img src="/images/site_images/img5.jpg" alt>
+            <img src="/images/site_images/img1.jpg" alt>
+        </figure>
+    </div>
+
+</body>
+
+</html>

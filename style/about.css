@@ -1,0 +1,128 @@
+.aboutSection,
+.mayorSection {
+    min-height: 40vh;
+    width: 100vw;
+    color: var(--bc);
+    display: grid;
+    gap: 25px;
+    letter-spacing: 1px;
+}
+
+
+.para {
+    grid-area: para;
+}
+
+.imgPara {
+    grid-area: imgPara;
+}
+
+.para2 {
+    grid-area: para2;
+}
+
+.imgPara2 {
+    grid-area: imgPara2;
+}
+
+.imgPara img ,.imgPara2 img {
+    width: 100%;
+}
+
+.mayorImg {
+    justify-self: center;
+    grid-area: mayorImg;
+}
+
+.mayorPara {
+    grid-area: mayorPara;
+}
+
+@media (min-width: 751px) {
+    .aboutSection {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "para  imgPara"
+            "para  imgPara"
+            "imgPara2  para2"
+            "imgPara2  para2"
+            ;
+        gap: 10px
+    }
+
+    .mayorSection {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "mayorPara mayorImg "
+            "mayorPara mayorImg";
+    }
+
+    .para,.para2,
+    .mayorPara , .imgPara , .imgPara2{
+        margin: 0px 25px;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .aboutSection {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "para para imgPara imgPara"
+            "para para imgPara imgPara"
+            "imgPara2 imgPara2 para2 para2"
+            "imgPara2 imgPara2 para2 para2"
+            ;
+        gap: 50px
+    }
+
+    .mayorSection {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            " mayorImg mayorPara"
+            "mayorImg mayorPara ";
+    }
+
+    .para,.para2 , .imgPara , .imgPara2{
+        margin: 0px 50px;
+        text-align: justify;
+    }
+    .imgPara img ,.imgPara2 img {
+        width: 90%;
+    }
+    .mayorPara{
+        margin: 0px 100px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .aboutSection {
+        grid-template-rows: repeat(2, 1fr, 2fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "para "
+            "imgPara"
+            "para2"
+            "imgPara2";
+    }
+
+    .para,.para2,
+    .mayorPara , .imgPara , .imgPara2{
+        margin: 0px 30px;
+        text-align: justify;
+    }
+
+    .mayorSection {
+        grid-template-rows: repeat(2, 1fr, 2fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "mayorImg "
+            "mayorPara";
+    }
+}
