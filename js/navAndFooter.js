@@ -21,9 +21,9 @@ burgerMenu.addEventListener('click', () => {
 })
 
 const randomBackground = function (bg) {
-    let imgsArray = ['img17.webp','img13.jpg','img1.jpg','img15.jpg','img18.webp','img20.webp'];
+    let imgsArray = ['img17.webp', 'img13.jpg', 'img1.jpg', 'img15.jpg', 'img18.webp', 'img20.webp'];
     let rndNumber = Math.floor(Math.random() * imgsArray.length)
-    bg.style.backgroundImage = `url(../images/site-images/${imgsArray[rndNumber]})`}
+    bg.style.backgroundImage = `url(images/site-images/${imgsArray[rndNumber]})`
+}
 
-    randomBackground(headerContainer)
-    
+randomBackground(headerContainer)
