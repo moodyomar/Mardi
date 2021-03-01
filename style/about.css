@@ -37,6 +37,11 @@
 .mayorPara {
     grid-area: mayorPara;
 }
+.para,.para2,.mayorPara {
+    /* color: red; */
+    font-family: var(--frss);
+    /* font-size: 1rem; */
+}
 
 @media (min-width: 751px) {
     .aboutSection {
@@ -91,15 +96,16 @@
     .para,.para2 , .imgPara , .imgPara2{
         margin: 0px 50px;
         text-align: justify;
+        line-height: 1.7;
     }
     .imgPara img ,.imgPara2 img {
         width: 90%;
     }
     .mayorPara{
         margin: 0px 100px;
-    }
+        line-height: 1.7;
 }
-
+}
 @media (max-width: 750px) {
 
     .aboutSection {
@@ -115,7 +121,7 @@
     .para,.para2,
     .mayorPara , .imgPara , .imgPara2{
         margin: 0px 30px;
-        text-align: justify;
+        text-align: left;
     }
 
     .mayorSection {
@@ -125,4 +131,5 @@
             "mayorImg "
             "mayorPara";
     }
+   
 }

@@ -6,7 +6,7 @@ const scrollDownBtn = document.querySelector('#scrollDownBtn');
 const SectionTitle = document.querySelector('.SectionTitle h2')
 const SectionTitleAll = document.querySelectorAll('.SectionTitle h2');
 
-
+const galleryimage = document.querySelector('.gallery-image');
 
 // ----- Functions -----
 function scrollToGallery() {
@@ -42,6 +42,10 @@ const slideUpFading = function(e,t=2){
 
 
 // ----- Event Listerers -----
+galleryimage.addEventListener('click',() => {
+    console.log(galleryimage, 'clicked')
+})
+
 
 // scrollDownBtn.addEventListener('click', () => {
 //     console.log('scroll');
