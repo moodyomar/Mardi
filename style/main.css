@@ -21,6 +21,7 @@
 .SectionTitle h2 {
     border-bottom: 5px solid var(--yc);
     letter-spacing: 5px;
+    opacity: 0;
 }
 
 button {
@@ -34,7 +35,7 @@ button {
     cursor: pointer;
 }
 
-x button:hover {
+button:hover {
     color: var(--pc);
     background-color: var(--wc);
 }
@@ -323,12 +324,29 @@ button {
     margin: 0px 50px;
     text-align: center;
     line-height: 1.7;
+    min-height: 250px;
 }
-
+.imagesSlider{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.mySlides{
+    width: 80%;
+    min-height: 250px;
+}
 .whenMardiBtns {
     text-align: center;
 }
-
+/* .sliderImg1{
+    background-image: url(images/site-images/img10.jpg);
+    min-height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+} */
 
 
 
@@ -519,6 +537,14 @@ footer p {
     button {
         padding: 15px 50px;
         font-weight: bold;
+    }
+    .imagesSlider img{
+    max-height: 75vh;
+    
+    }
+    .whenMardi p {
+
+        min-height: 150px;
     }
 }
 

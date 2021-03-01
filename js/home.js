@@ -1,12 +1,15 @@
+// Global Vars If Needed
+var slideIndex = 1;
+
+
 // ----- D O M -----   
 
-const headerTitle = document.querySelector('.headerTitle h1')
+const mainHeaderTitle = document.querySelector('.headerTitle h1')
 const headerTitle_p = document.querySelector('.headerTitle h5')
 const scrollDownBtn = document.querySelector('#scrollDownBtn');
-const SectionTitle = document.querySelector('.SectionTitle h2')
-const SectionTitleAll = document.querySelectorAll('.SectionTitle h2');
 
 const galleryimage = document.querySelector('.gallery-image');
+
 
 // ----- Functions -----
 function scrollToGallery() {
@@ -19,6 +22,7 @@ const delayElements = function (e,t) {
 
         e.forEach((one => {
             one.style.animation = `slideLeft ${t}s`
+            one.style.display = "block"
         }))
     }, 2000)
 }
@@ -40,6 +44,20 @@ const slideUpFading = function(e,t=2){
     e.style.animation = `slideUpFading ${t}s ease`
 }
 
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
 
 // ----- Event Listerers -----
 galleryimage.addEventListener('click',() => {
@@ -47,34 +65,18 @@ galleryimage.addEventListener('click',() => {
 })
 
 
-// scrollDownBtn.addEventListener('click', () => {
-//     console.log('scroll');
-// })
-
 
 
 
 // ----- Functions Excution -----
-delayElements(SectionTitleAll,2)
-fadeInElement(headerTitle,4)
+fadeInElement(mainHeaderTitle,4)
 slideUpFading(headerTitle_p,1)
 slideUpFading(scrollDownBtn,2)
-
-
-var slideIndex = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+
+
+
+
+
