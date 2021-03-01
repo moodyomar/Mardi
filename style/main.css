@@ -34,7 +34,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+x button:hover {
     color: var(--pc);
     background-color: var(--wc);
 }
@@ -53,10 +53,17 @@ body {
     --fhp: 'Henny Penny';
     --frss: 'Roboto', sans-serif;
 }
-h1,h2{
-   font-family: var(--fhp);   
+
+h1,
+h2 {
+    font-family: var(--fhp);
 }
-h3,h4,h5,button,a{
+
+h3,
+h4,
+h5,
+button,
+a {
     font-family: var(--frss);
 }
 
@@ -311,10 +318,14 @@ button {
 /* -------------------- (SECTION 5) -------------------- */
 
 /*    SLIDER SECTION    */
-.whenMardi p{
+.whenMardi p {
     margin: 0px 50px;
-    text-align: justify;
+    text-align: center;
     line-height: 1.7;
+}
+
+.whenMardiBtns {
+    text-align: center;
 }
 
 
@@ -365,7 +376,12 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: var(--wc);
+    color: #999;
+}
+
+footer ul li a:hover {
+    text-decoration: none;
+    color: var(--yc);
 }
 
 .footerAbout,
@@ -392,6 +408,11 @@ footer ul li a {
     height: 120px;
 }
 
+footer p {
+    color: #999;
+
+}
+
 .footerEnd {
     grid-area: footerEnd;
 }
@@ -402,7 +423,9 @@ footer ul li a {
     background-color: #1a1b1d;
     text-align: center;
     letter-spacing: 1px;
+    color: rgb(172, 172, 172);
 }
+
 /* .footerLast a{
     color: #fff;
     text-decoration: none;
@@ -650,7 +673,7 @@ footer ul li a {
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
+
     footer {
         min-height: 450px;
         grid-template-rows: repeat(4, 1fr);
@@ -662,7 +685,7 @@ footer ul li a {
             "footerAbout footerAbout"
             "footerEnd   footerEnd ";
         gap: 5px;
-    
+
     }
 
 }
