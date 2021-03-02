@@ -1,3 +1,7 @@
+/* --- Main Scripts And Element --- */
+
+
+
 // Global Vars If Needed
 let flag = false;
 
@@ -10,7 +14,9 @@ const navLinksLi = document.querySelectorAll('.navLinks li');
 const headerContainer = document.querySelector('.headerContainer')
 const sectionTitle = $('.SectionTitle h2')
 const headerTitle = $('.headerTitle h1')
-
+const galleryimages = document.querySelectorAll('.gallery-image');
+const popupOverlay = document.querySelector('.popupOverlay');
+const popup = document.querySelector('.popup');
 
 
 // ----- Functions -----
@@ -19,7 +25,10 @@ const randomBackground = function (bg) {
     let rndNumber = Math.floor(Math.random() * imgsArray.length)
     bg.style.backgroundImage = `url(images/site-images/${imgsArray[rndNumber]})`
 }
-
+const showImage = function(image){
+    popupOverlay.style.display = 'block'
+    popup.innerHTML = `<img src="${image.src}">`
+}
 
 
 // ----- Event Listerers -----
@@ -38,7 +47,15 @@ burgerMenu.addEventListener('click', () => {
 
     burgerMenu.classList.toggle('toggle');
 })
+galleryimages.forEach(image => {
+    image.addEventListener('click',() => {
+        showImage(image)
+    })
+})
 
+popupOverlay.addEventListener('click',() => {
+    popupOverlay.style.display = 'none'
+})
 
 
 // ----- Functions Excution -----

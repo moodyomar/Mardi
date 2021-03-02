@@ -251,7 +251,7 @@ h5 {
 }
 
 .gallery-image:hover {
-    transform: scale(1.20);
+    /* filter: blur(8px) */
 }
 
 
@@ -345,7 +345,33 @@ button {
     transition: all 0.3s ease-out;
 }
 
-
+/* POPUP STYLE */
+.popupOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+.popup {
+    width: 100%;
+    height: 40vh;
+    max-width: 85vw;
+    margin: 30vh auto;
+    padding: 15px;
+    background-color: #fff;
+    position: relative;
+   
+    
+}
+.popup img{
+    width: 100%;
+    height: 100%;
+    
+    
+}
 
 
 
@@ -445,11 +471,6 @@ footer p {
     color: rgb(172, 172, 172);
 }
 
-/* .footerLast a{
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-} */
 
 
 
@@ -489,7 +510,10 @@ footer p {
 
         padding: 15px 30px;
     }
-
+    .popup {
+        height: 45vh;   
+        padding: 15px;
+    }
 }
 
 /* Biggest */
@@ -545,6 +569,10 @@ footer p {
     .whenMardi p {
 
         min-height: 150px;
+    }
+    .popup {
+        height: 65vh;   
+        padding: 15px;
     }
 }
 
@@ -637,6 +665,11 @@ footer p {
     /* -- Responsive for Media Section -- */
     .mediaSection {
         margin: 0px 10%;
+    }
+    
+    .popup {
+        height: 40vh;   
+        padding: 15px;
     }
 
     /* (LNT1) */

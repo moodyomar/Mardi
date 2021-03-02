@@ -10,7 +10,6 @@ const mainHeaderTitle = document.querySelector('.headerTitle h1')
 const headerTitle_p = document.querySelector('.headerTitle h5')
 const scrollDownBtn = document.querySelector('#scrollDownBtn');
 
-const galleryimages = document.querySelectorAll('.gallery-image');
 
 
 
@@ -62,11 +61,8 @@ function showDivs(n) {
 
 
 // ----- Event Listerers -----
-galleryimages.forEach(image => {
-    image.addEventListener('click',() => {
-        console.log(image,'click')
-    })
-})
+
+
 
 
 
