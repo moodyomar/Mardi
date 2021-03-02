@@ -2,13 +2,16 @@
 var slideIndex = 1;
 
 
+
+
 // ----- D O M -----   
 
 const mainHeaderTitle = document.querySelector('.headerTitle h1')
 const headerTitle_p = document.querySelector('.headerTitle h5')
 const scrollDownBtn = document.querySelector('#scrollDownBtn');
 
-const galleryimage = document.querySelector('.gallery-image');
+const galleryimages = document.querySelectorAll('.gallery-image');
+
 
 
 // ----- Functions -----
@@ -17,9 +20,7 @@ function scrollToGallery() {
 }
 
 const delayElements = function (e,t) {
-    // e.style.opacity = 0;
     setTimeout(() => {
-
         e.forEach((one => {
             one.style.animation = `slideLeft ${t}s`
             one.style.display = "block"
@@ -59,17 +60,19 @@ function showDivs(n) {
     showDivs(slideIndex += n);
   }
 
+
 // ----- Event Listerers -----
-galleryimage.addEventListener('click',() => {
-    console.log(galleryimage, 'clicked')
+galleryimages.forEach(image => {
+    image.addEventListener('click',() => {
+        console.log(image,'click')
+    })
 })
 
 
 
 
-
 // ----- Functions Excution -----
-fadeInElement(mainHeaderTitle,4)
+fadeInElement(mainHeaderTitle,3)
 slideUpFading(headerTitle_p,1)
 slideUpFading(scrollDownBtn,2)
 showDivs(slideIndex);

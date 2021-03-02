@@ -266,7 +266,49 @@ h5 {
 
 
 
+
 /* -------------------- (SECTION 3) -------------------- */
+
+/*    SLIDER SECTION    */
+.whenMardi p {
+    margin: 0px 50px;
+    text-align: center;
+    line-height: 1.7;
+    min-height: 250px;
+}
+.imagesSlider{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.mySlides{
+    width: 80%;
+    min-height: 250px;
+}
+.whenMardiBtns {
+    text-align: center;
+}
+/* .sliderImg1{
+    background-image: url(images/site-images/img10.jpg);
+    min-height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- (SECTION 4) -------------------- */
 
 /*    SPONSORS SECTION    */
 
@@ -317,51 +359,9 @@ button {
 
 
 
+
+
 /* -------------------- (SECTION 5) -------------------- */
-
-/*    SLIDER SECTION    */
-.whenMardi p {
-    margin: 0px 50px;
-    text-align: center;
-    line-height: 1.7;
-    min-height: 250px;
-}
-.imagesSlider{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-}
-.mySlides{
-    width: 80%;
-    min-height: 250px;
-}
-.whenMardiBtns {
-    text-align: center;
-}
-/* .sliderImg1{
-    background-image: url(images/site-images/img10.jpg);
-    min-height: 40vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------- (SECTION 4) -------------------- */
 
 /*    FOOTER SECTION    */
 footer {
