@@ -193,7 +193,7 @@ i {
 
 /* only home page */
 .headerContainerHome {
-    background-image: url("/images/site-images/img27.jpg");
+    background-image: url("images/site-images/img27.jpg");
 }
 
 
@@ -668,7 +668,7 @@ footer p {
         height: 44px;
     }
 
-    .sponsorsSection{
+    .sponsorsSection {
         gap: 0px;
     }
 
@@ -796,11 +796,11 @@ footer p {
 
     @media (max-width: 415px) {
 
-     .sponsorsSection {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
+        .sponsorsSection {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
     }
 
 }
