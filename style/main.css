@@ -113,7 +113,10 @@ nav {
     background-color: var(--wc);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
-
+i{
+    color: var(--pc);
+    font-size: 1.3em;
+}
 .navLinks {
     width: 30%;
     display: flex;
@@ -128,12 +131,16 @@ nav {
 .navLinks a {
     text-decoration: none;
     color: var(--bc);
+    /* border-bottom: 4px solid var(--yc); */
 }
 
 .navLinks a:hover {
     color: var(--yc);
-    /* border-bottom: 4px solid var(--yc); */
-
+}
+.underLine{
+   height: 5px;
+   width: 0%;
+   background-color: var(--yc);
 }
 
 
@@ -433,7 +440,7 @@ footer ul li a:hover {
 .footerMore,
 .footerLast {
     margin: 20px 50px 0px;
-    text-align: center;
+    text-align: justify;
 }
 
 .footerAbout {
