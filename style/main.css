@@ -524,6 +524,12 @@ footer p {
         height: 45vh;
         padding: 15px;
     }
+
+    .imgContainer img {
+        /* overflow: hidden; */
+        width: 70%;
+        height: 100%;
+    }
 }
 
 /* Biggest */
@@ -590,8 +596,8 @@ footer p {
 
     .imgContainer img {
         /* overflow: hidden; */
-width: 50%;
-height: 100%;
+        width: 50%;
+        height: 100%;
     }
 
 
@@ -784,12 +790,12 @@ height: 100%;
 
     }
 
-    @media (max-width: 439px) {
+    /* @media (max-width: 439px) {
         .sponsorsSection {
             display: flex;
             flex-direction: column;
             padding: 20px;
         }
-    }
+    } */
 
 }
