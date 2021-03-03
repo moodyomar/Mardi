@@ -668,6 +668,10 @@ footer p {
         height: 44px;
     }
 
+    .sponsorsSection{
+        gap: 0px;
+    }
+
     .sponsorCard1 {
         grid-column: 1 / 2;
         grid-row: 1;
@@ -790,12 +794,13 @@ footer p {
 
     }
 
-    /* @media (max-width: 439px) {
-        .sponsorsSection {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-    } */
+    @media (max-width: 415px) {
+
+     .sponsorsSection {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    }
 
 }
