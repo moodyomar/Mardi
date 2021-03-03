@@ -1,8 +1,0 @@
-Random Image with size 225x225 :
-
-https://picsum.photos/225/225/?random
-
-Gray(wireframe) Image with size 225x400:           
-http://via.placeholder.com/225x400
-
-Test after GitHub 
