@@ -14,7 +14,7 @@ const navLinksLi = document.querySelectorAll('.navLinks li');
 const headerContainer = document.querySelector('.headerContainer')
 const sectionTitle = $('.SectionTitle h2')
 const headerTitle = $('.headerTitle h1')
-
+const blackOverlay = document.querySelector('.blackOverlay')
 
 
 // ----- Functions -----
@@ -22,6 +22,8 @@ const randomBackground = function (bg) {
     let imgsArray = ['img17.webp', 'img13.jpg', 'img1.jpg', 'img15.jpg', 'img18.webp', 'img20.webp', 'img21.jpg', 'img22.jpg', 'img23.jpg', 'img24.jpg', 'img25.jpg'];
     let rndNumber = Math.floor(Math.random() * imgsArray.length)
     bg.style.backgroundImage = `url(images/site-images/${imgsArray[rndNumber]})`
+    blackOverlay.style.height = "60vh"
+    bg.style.minHeight = "60vh"
 }
 
 
