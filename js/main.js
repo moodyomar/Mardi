@@ -19,7 +19,7 @@ const blackOverlay = document.querySelector('.blackOverlay')
 
 // ----- Functions -----
 const randomBackground = function (bg) {
-    let imgsArray = ['img17.webp', 'img13.jpg', 'img1.jpg', 'img15.jpg', 'img18.webp', 'img20.webp', 'img21.jpg', 'img22.jpg', 'img23.jpg', 'img24.jpg', 'img25.jpg'];
+    let imgsArray = ['img27.jpg', 'img19.jpg', 'img17.webp', 'img22.jpg', 'img25.jpg'];
     let rndNumber = Math.floor(Math.random() * imgsArray.length)
     bg.style.backgroundImage = `url(images/site-images/${imgsArray[rndNumber]})`
     blackOverlay.style.height = "60vh"
@@ -74,6 +74,6 @@ $("document").ready(function () {
             opacity: '1'
         }, "slow");
 
-   
-      
+
+
 });
