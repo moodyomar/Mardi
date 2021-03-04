@@ -200,7 +200,6 @@ i {
 .headerTitle h1,
 h5 {
     color: var(--wc)
-    
 }
 
 .headerTitle h1 {
@@ -392,12 +391,45 @@ button {
 
 
 
+/* -------------------- (SECTION 6) -------------------- */
+
+/*    ABOUT US SECTION    */
+
+.aboutUs {
+    display: grid;
+}
+
+.aboutUs p {
+    grid-area: para;
+}
+
+.aboutUs button {
+    grid-area: button;
+}
+
+.aboutUs img {
+    grid-area: img;
+}
+
+.aboutUs button a {
+    text-decoration: none;
+    color: var(--wc)
+}
 
 
 
 
 
-/* -------------------- (SECTION 5) -------------------- */
+
+
+
+
+
+
+
+
+
+/* -------------------- (SECTION 6) -------------------- */
 
 /*    FOOTER SECTION    */
 footer {
@@ -531,6 +563,31 @@ footer p {
         width: 70%;
         height: 100%;
     }
+
+    .aboutUs {
+
+        display: grid;
+        grid-template-areas:
+            "para"
+            "button"
+            "img"
+        ;
+        gap: 50px;
+        margin: auto 10%;
+    }
+
+    .aboutUs p {
+        padding: 0px 5%
+    }
+
+    .aboutUs p button {
+        margin-top: 5%;
+    }
+
+    .aboutUs img {
+        width: 100%;
+
+    }
 }
 
 /* ---------- Biggest Screen -----------  */
@@ -613,14 +670,39 @@ footer p {
         transition: all 0.3s ease-out;
     }
 
-.headerTitle h1 {
-    font-size: 5em;
+    .headerTitle h1 {
+        font-size: 5em;
+    }
+
+    .headerTitle h5 {
+        font-size: 1.3em;
+    }
+
+    .aboutUs {
+
+        display: grid;
+        grid-template-areas:
+            "para img"
+            "button img"
+        ;
+        gap: 100px;
+        margin: auto 10%;
+    }
+
+    .aboutUs p {
+        padding: 0px 5%
+    }
+
+    .aboutUs p button {
+        margin-top: 20%;
+    }
+
+    .aboutUs img {
+        width: 100%;
+
+    }
 }
 
-.headerTitle h5 {
-    font-size: 1.3em;
-}
-}
 
 
 /* big to small/another order caused of max-width  */
@@ -727,6 +809,29 @@ footer p {
         padding: 15px;
     }
 
+    .aboutUs {
+
+        display: grid;
+        grid-template-areas:
+            "para "
+            "button"
+            "img"
+        ;
+        gap: 150px;
+        margin: auto 10%;
+    }
+
+    .aboutUs button {}
+
+    .aboutUs img {
+        width: 100%;
+
+    }
+
+    .whenMardi p {
+        margin-bottom: 10%;
+    }
+
     /* (LNT1) */
     @keyframes navLinksFade {
         from {
@@ -803,13 +908,24 @@ footer p {
 
     }
 
-    @media (max-width: 415px) {
+}
 
-        .sponsorsSection {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
+
+/* VERY SMALL SCREENS */
+@media (max-width: 415px) {
+
+    .sponsorsSection {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
     }
+}
 
+.aboutUs {
+
+    text-align: center;
+}
+
+.whenMardi p {
+    margin-bottom: 25%;
 }

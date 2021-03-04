@@ -1,20 +1,21 @@
-const galleryimages = document.querySelectorAll('.gallery-image');
-const popupOverlay = document.querySelector('.popupOverlay');
-const popup = document.querySelector('.popup');
-
+const $galleryimages = $('.gallery-item img')
+const $popupOverlay = $('.popupOverlay')
+const $popup = $('.popup')
 
 const showImage = function(image){
-    popupOverlay.style.display = 'block'
-    popup.innerHTML = `<img src="${image.src}">`
+    $popupOverlay.fadeIn(500)
+    $popup.html(`<img src="${image.src}" alt="Mardi Gras Glllery Photo" >`)
+    
 }
 
 
-galleryimages.forEach(image => {
-    image.addEventListener('click',() => {
+$galleryimages.each((index, image) => {
+    image.addEventListener('click', () => {
         showImage(image)
     })
 })
 
-popupOverlay.addEventListener('click',() => {
-    popupOverlay.style.display = 'none'
+$popupOverlay.on('click', () => {
+    $popupOverlay.fadeOut(200)
 })
+
