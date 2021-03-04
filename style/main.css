@@ -821,7 +821,9 @@ footer p {
         margin: auto 10%;
     }
 
-    .aboutUs button {}
+ .footerAbout{
+     text-align: center;
+ }
 
     .aboutUs img {
         width: 100%;
