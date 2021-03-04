@@ -1,6 +1,8 @@
 .faq-question {
+    margin: 0% 20%;
     padding: 20px 0;
     border-bottom: 1px dotted #ccc;
+    text-align: center;
 }
 
 .question {
