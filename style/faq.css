@@ -1,8 +1,9 @@
 .faq-question {
-    margin: 0% 20%;
+    margin: 0% 10%;
     padding: 20px 0;
     border-bottom: 1px dotted #ccc;
     text-align: center;
+    font-family: var(--frss);
 }
 
 .question {
@@ -18,13 +19,14 @@
 .answer {
     font-size: 20px;
     padding: 0px 14px;
-    margin: 0 40px;
+    margin: 0 20px;
     height: 0;
     overflow: hidden;
     z-index: -1;
     position: relative;
     opacity: 0;
     transition: .4s ease;
+    color: #444;
 }
 
 .panel:checked~.answer {
