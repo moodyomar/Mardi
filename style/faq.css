@@ -14,6 +14,7 @@
     padding: 10px 10px 0 48px;
     display: block;
     cursor: pointer;
+    font-family: var(--fp);
 }
 
 .answer {
@@ -52,4 +53,11 @@
 
 .panel {
     display: none;
+}
+.para{
+    font-family: var(--frss);
+    /* font-size: 1rem; */
+    margin: 10% 30px;
+    text-align: center;
+    
 }

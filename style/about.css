@@ -121,7 +121,7 @@
     .para,.para2,
     .mayorPara , .imgPara , .imgPara2{
         margin: 0px 30px;
-        text-align: left;
+        text-align: center;
     }
 
     .mayorSection {

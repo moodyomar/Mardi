@@ -76,4 +76,23 @@ $("document").ready(function () {
             opacity: '1'
         }, "slow");
 
+        sectionTitle.on('mouseenter', function () {
+            sectionTitle.animate({
+                width: '+=60px'
+            })
+            .css({
+                borderBottom: '5px solid var(--pc)'
+            })
+        })
+
+        // animation on my famouse section title - underline
+        sectionTitle.on('mouseleave', function () {
+            sectionTitle.animate({
+                width: '-=60px'
+            })
+            .css({
+                borderBottom: '5px solid var(--yc)'
+            })
+        })
+       
 });
