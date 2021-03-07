@@ -56,7 +56,7 @@ body {
 }
 
 h1,
-h2{
+h2 {
     font-family: var(--fhp);
 }
 
@@ -64,7 +64,8 @@ h3,
 h4,
 h5,
 button,
-a,p {
+a,
+p {
     font-family: var(--frss);
 }
 
@@ -77,8 +78,32 @@ a,p {
     --bc: #0d0d0d;
 }
 
+/* Underline animation on nav links */
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
 
+.underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: var(--pc);
+    height: 5px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
 
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+    right: 0;
+}
 
 
 
@@ -267,7 +292,8 @@ h5 {
     height: 100%;
     transition: all 0.3s ease-out;
 }
-.gallery-image:hover{
+
+.gallery-image:hover {
     transform: scale(1.3);
     transition: all 0.3s ease-out;
 }
@@ -338,10 +364,7 @@ h5 {
     margin: 0px 10px 20px;
 }
 
-.sponsorCard h3,
-button {
-    margin-top: 10px;
-}
+
 
 /* POPUP STYLE */
 .popupOverlay {
@@ -618,6 +641,19 @@ footer p {
         min-width: 300px;
     }
 
+    .sponsorCard h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        margin: -60px auto;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--wc);
+        letter-spacing: 2px;
+
+    }
+
     .mediaSection {
         margin: 0px 10%;
     }
@@ -638,27 +674,29 @@ footer p {
     }
 
     .popup {
-        height: 65vh;
+        height: 70vh;
         padding: 15px;
+        margin: 20vh auto;
     }
 
     .imgContainer img {
         width: 50%;
         height: 100%;
         filter: blur(2px);
+        transform: scale(1.5);
+        transition: all 0.2s ease-out;
     }
-
 
     .imgContainer img:hover {
         overflow: hidden;
         filter: blur(0px);
-        transform: scale(1.05);
-        border-radius: 30px;
+        transform: scale(1.2);
         transition: all 0.3s ease-in;
     }
 
-    .imgContainer img {
-        transition: all 0.2s ease-out;
+    .imgContainer {
+        overflow: hidden;
+
     }
 
     .headerTitle h1 {
@@ -694,6 +732,31 @@ footer p {
     }
 }
 
+@media (min-width: 1260px) {
+
+
+    .imagesSlider img {
+        max-height: 75vh;
+    }
+
+    .popup {
+        height: 80vh;
+        margin: 15vh auto;
+    }
+
+    .imgContainer img {
+        transform: scale(1.80);
+    }
+
+    .imgContainer img:hover {
+        overflow: hidden;
+        filter: blur(0px);
+        transform: scale(1.9);
+        transition: all 0.2s ease-in;
+    }
+
+
+}
 
 
 /* big to small/another order caused of max-width  */
@@ -748,6 +811,14 @@ footer p {
     p {
         /* in case tittle miss up the order */
         height: 44px;
+    }
+
+    .sponsorCard h3 {
+        margin-top: -48px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--wc);
+
     }
 
     .sponsorsSection {
@@ -818,13 +889,13 @@ footer p {
 
     .aboutUs img {
         width: 100%;
-margin-top: 10%;
+        margin-top: 10%;
     }
 
     .whenMardi p {
         margin-bottom: 10%;
     }
- 
+
 
     /* (LNT1) */
     @keyframes navLinksFade {
@@ -915,13 +986,13 @@ margin-top: 10%;
         padding: 20px;
     }
 
-    .aboutUs img{
+    .aboutUs img {
 
         margin-top: 20%
     }
+
     .whenMardi p {
         margin-bottom: 25%;
     }
-    
-}
 
+}
