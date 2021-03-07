@@ -64,8 +64,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background: var(--wc);
-    color: var(--pc);
+
 	transition:background-color 0.3s ease-in-out;
 }
 

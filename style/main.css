@@ -107,11 +107,6 @@ p {
 
 
 
-
-
-
-
-
 /* -------------------- (SECTION 1) -------------------- */
 
 /*    NAV BAR    */
@@ -525,7 +520,7 @@ footer p {
     background-color: #1a1b1d;
     text-align: center;
     letter-spacing: 1px;
-    color: rgb(172, 172, 172);
+    color: rgb(172, 172, 172); 
 }
 
 
@@ -568,7 +563,7 @@ footer p {
     }
 
     .popup {
-        height: 45vh;
+        height: 55vh;
         padding: 15px;
     }
 
@@ -640,18 +635,25 @@ footer p {
     .sponsorCard img {
         min-width: 300px;
     }
-
+ 
     .sponsorCard h3 {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        opacity: 0;
         height: 60px;
         margin: -60px auto;
+        transform: translateY(60px);
+        transition: all 0.3s ease-out;
         position: relative;
         background-color: rgba(0, 0, 0, 0.5);
         color: var(--wc);
         letter-spacing: 2px;
+    }
 
+    .sponsorCard{
+        overflow-y: hidden;
     }
 
     .mediaSection {
@@ -897,7 +899,7 @@ footer p {
     }
 
 
-    /* (LNT1) */
+    /* (keyframes) */
     @keyframes navLinksFade {
         from {
             opacity: 0;
@@ -937,13 +939,27 @@ footer p {
     /* Slide up and fade in animation */
     @keyframes slideUpFading {
         from {
-            opacity: 0;
-            transform: translateY(100px);
+    
+            height: 20vh;
+            width: 20vw;
         }
 
         to {
             opacity: 1;
-            transform: translateY(0px);
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+
+    @keyframes growUp {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
         }
     }
 

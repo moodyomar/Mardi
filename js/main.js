@@ -58,6 +58,8 @@ randomBackground(headerContainer)
 // JQuery - Section Title animation
 $("document").ready(function () {
 
+
+
     headerTitle
         .hide().
     slideDown(800);
@@ -68,6 +70,7 @@ $("document").ready(function () {
             marginLeft: '-150%',
             opacity: '0'
         }, "slow");
+
     sectionTitle
 
     sectionTitle
@@ -76,23 +79,24 @@ $("document").ready(function () {
             opacity: '1'
         }, "slow");
 
-        sectionTitle.on('mouseenter', function () {
-            sectionTitle.animate({
+        
+    sectionTitle.on('mouseenter', function () {
+        sectionTitle.animate({
                 width: '+=60px'
             })
             .css({
                 borderBottom: '5px solid var(--pc)'
             })
-        })
+    })
 
-        // animation on my famouse section title - underline
-        sectionTitle.on('mouseleave', function () {
-            sectionTitle.animate({
+    // animation on my famouse section title - underline
+    sectionTitle.on('mouseleave', function () {
+        sectionTitle.animate({
                 width: '-=60px'
             })
             .css({
                 borderBottom: '5px solid var(--yc)'
             })
-        })
-       
+    })
+
 });
