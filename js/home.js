@@ -44,8 +44,8 @@ const slideUpFading = function (e, t = 2) {
 }
 
 function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
+    let i;
+    let x = document.getElementsByClassName("mySlides");
     if (n > x.length) {
         slideIndex = 1
     }
