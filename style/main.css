@@ -939,27 +939,13 @@ footer p {
     /* Slide up and fade in animation */
     @keyframes slideUpFading {
         from {
-    
-            height: 20vh;
-            width: 20vw;
-        }
-
-        to {
-            opacity: 1;
-            height: 100vh;
-            width: 100vw;
-        }
-    }
-
-    @keyframes growUp {
-        from {
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateY(50px);
         }
 
         to {
             opacity: 1;
-            transform: translateX(0px);
+            transform: translateY(0px);
         }
     }
 

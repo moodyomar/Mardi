@@ -24,8 +24,7 @@ const randomBackground = function (bg) {
     bg.style.backgroundImage = `url(images/site-images/${imgsArray[rndNumber]})`
     blackOverlay.style.height = "60vh"
     bg.style.minHeight = "60vh"
-    // bg.style.backgroundSize = "cover";
-    // bg.style.backgroundposition = "center center"
+
 }
 
 
