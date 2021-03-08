@@ -84,7 +84,8 @@ sponsorCards.forEach((card , cardIndex) => {
     card.addEventListener('mouseleave', function () {
         h3s.forEach((h3, h3Index) => {
             if (h3Index == cardIndex) {
-                h3.style.transform = 'translateY(80px)'
+                h3.style.transform = 'translateY(60px)'
+                h3.style.opacity = 0;
             }
         })
     })
