@@ -980,7 +980,7 @@ footer p {
 
 
 /* VERY SMALL SCREENS */
-@media (max-width: 410px) {
+@media (max-width: 414px) {
 
     .sponsorsSection {
         display: flex;
