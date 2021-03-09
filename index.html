@@ -14,11 +14,18 @@
     <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     <script src="js/home.js" defer></script>
     <script src="js/imageViewer.js" defer></script>
-
 </head>
 
 <body>
-
+    <div class="container">
+        <section>
+            <div>
+                <div>
+                    <h2>my name me</h2>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- (SECTION 1) -->
     <!-- Nav Bar -->
     <nav>
@@ -40,9 +47,6 @@
     </nav>
     <!-- Header -->
 
-    <!-- headerContainerHome
-         blackOverlayHome -->
-
     <header class="  headerContainer">
         <div class=" blackOverlay ">
             <div class="headerTitle">
@@ -55,8 +59,6 @@
     </header>
 
     <!-- (SECTION 2) -->
-    <!-- Slider -->
-
 
     <!-- Media -->
 
@@ -101,12 +103,14 @@
             </div>
         </div>
         <div class="SectionTitle">
-             <a href="media.html"> <button>All Photos</button></a>
+            <a href="media.html"> <button>All Photos</button></a>
         </div>
     </section>
 
 
-    <!-- whenMardi Section -->
+    <!-- (SECTION 3) -->
+
+    <!-- SLIDER -->
 
     <div class="SectionTitle">
         <h2>When is Mardi gras</h2>
@@ -125,16 +129,51 @@
 
         <div class="whenMardi">
 
-            <div class="imagesSlider">
-                <img class="mySlides" src="images/site-images/img19.jpg">
-                <img class="mySlides" src="images/site-images/img20.webp">
-                <img class="mySlides" src="images/site-images/img22.jpg">
-                <img class="mySlides" src="images/site-images/img27.jpg">
-                <div class="whenMardiBtns">
-                    <button class="next" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="prev" onclick="plusDivs(1)">&#10095;</button>
+            <div class="slideshow-container">
+        
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 5</div>
+                  <img src="images/site-images/img35.webp">
+                  <div class="text">Mardi Gras dolor, sit amet consectetur adipisicing elit. Alias, dolorem</div>
                 </div>
-            </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 5</div>
+                  <img src="images/site-images/img31.jpg">
+                  <div class="text">The Mardi Grass dolor sit amet consectetur elit</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 5</div>
+                  <img src="images/site-images/img32.webp">
+                  <div class="text">Festival Mardi Gras dolor sit amet, consectetur adipisicing elit consequatur</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="images/site-images/img33.jpg">
+                    <div class="text">Mardi Gras also Lorem ipsum, dolor sit amet consectetur adipisicing</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="images/site-images/img34.jpg">
+                    <div class="text">Mardi Gras blah blah Lorem ipsum dolor sit</div>
+                  </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
 
 
 
@@ -142,6 +181,7 @@
 
     </section>
 
+    <!-- (SECTION 4) -->
 
     <!-- Sponsors -->
     <div class="SectionTitle">
@@ -150,42 +190,57 @@
     <section class="sponsorsSection">
         <div class="sponsorCard sponsorCard1">
             <div class="imgContainer">
+                <a href="https://www.marriott.com/hotels/travel/msyis-sheraton-new-orleans-hotel/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&y_source=1_MTUwMjgzMC03MTUtbG9jYXRpb24uZ29vZ2xlX3dlYnNpdGVfb3ZlcnJpZGU%3D">
                 <img src="images/our-sponsors/sheraton/images/pool.jpg" alt="Sheraton New Orleans Hotel">
+            </a>
             </div>
             <h3>Sheraton Hotel<br>New Orleans </h3>
         </div>
         <div class="sponsorCard sponsorCard2">
             <div class="imgContainer">
+                  <a href="https://locations.walk-ons.com/walk-ons-sports-bistreaux-montgomery-ff39794efb19?utm_source=google&utm_medium=Yext">
                 <img src="images/our-sponsors/walkon/images/rawImage.jpg" alt="Walk-On's Bistreaux & Bar">
+                </a>
             </div>
             <h3>Walk-On's Bistreaux<br>And Bar</h3>
         </div>
         <div class="sponsorCard sponsorCard3">
             <div class="imgContainer">
+                  <a href="https://www.acehotel.com/neworleans/">
                 <img src="images/our-sponsors/acehotel/images/bar.jpg" alt="Ace Hotel New Orleans">
+                </a>
             </div>
             <h3 class="sponsorsTitle">Ace Hotel<br>New Orleans</h3>
         </div>
         <div class="sponsorCard sponsorCard4">
             <div class="imgContainer">
+                  <a href="https://www.ritzcarlton.com/en/hotels/new-orleans?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&y_source=1_NTc3MjYwLTcxNS1sb2NhdGlvbi5nb29nbGVfd2Vic2l0ZV9vdmVycmlkZQ%3D%3D">
                 <img src="images/our-sponsors/theritz/images/2.jpg" alt="The Ritz-Carlton New Orleans">
+                </a>
             </div>
             <h3>The Ritz-Carlton<br> New Orleans</h3>
         </div>
         <div class="sponsorCard sponsorCard5">
             <div class="imgContainer">
+                  <a href="https://www.lcm.org/">
                 <img src="images/our-sponsors/lcm/images/children.jpg" alt="Louisiana Children's Museum">
+                </a>
             </div>
             <h3>Louisiana Children's<br> Museum</h3>
         </div>
         <div class="sponsorCard sponsorCard6">
             <div class="imgContainer">
+                  <a href="https://www.bloodymarystours.com/">
                 <img src="images/our-sponsors/hauntedmuseum/images/cool-sign-for-826-and.jpg" alt="Haunted Museum">
+                </a>
             </div>
             <h3>Haunted Museum</h3>
         </div>
     </section>
 
+    <!-- (SECTION 5) -->
+
+    <!-- ABOUT US -->
 
     <div class="SectionTitle">
         <h2 id="sponsorsH2">About Us</h2>
@@ -193,9 +248,7 @@
 
     <section class="aboutUs">
 
-       
         <p>
-
             Mardi Gras in New Orleans
             is the holiday of that is celebrated in all of Louisiana, including the city of New Orleans. Celebrations
             are concentrated for about two weeks before and through Shrove Tuesday, the day before Ash Wednesday (the
@@ -213,7 +266,6 @@
         <img src="images/site-images/img25.jpg" alt="">
 
 
-
     </section>
 
     <div class="SectionTitle">
@@ -221,7 +273,7 @@
     </div>
 
 
-
+    <!-- (SECTION 5) -->
 
     <!-- Footer -->
 
@@ -268,7 +320,7 @@
         <div class="popup">
             <!-- add the image in javascript -->
         </div>
-        
+
 </body>
 
 </html>
