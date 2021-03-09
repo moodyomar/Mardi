@@ -70,7 +70,6 @@ $("document").ready(function () {
             opacity: '0'
         }, "slow");
 
-    sectionTitle
 
     sectionTitle
         .animate({

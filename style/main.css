@@ -329,6 +329,7 @@ h5 {
 
 .whenMardiBtns {
     text-align: center;
+    margin-top: 5px;
 }
 
 
@@ -974,7 +975,6 @@ footer p {
         gap: 5px;
 
     }
-
 
 }
 
