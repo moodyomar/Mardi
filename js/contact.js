@@ -18,6 +18,7 @@ inputChecker()
 
 const inputChecker = function () {
     let allGood = 0;
+    let good = 4;
     if (phoneInput.value.length == 10 && phoneInput.value.match(validPhone)) {
         valid(phoneInput)
         allGood++;
@@ -43,7 +44,7 @@ const inputChecker = function () {
         notValid(textarea)
     }
     console.log(allGood)
-    if(allGood == 4){
+    if(allGood == good){
         msg = `<h2>Dear ${nameInput.value},</h2> <br> <p> Thank you for choosing to contact us.<br> We have got your message and will get back to you ASAP. <br><br>
         Mardi Gras Team.</p>
         <br><img src="images/site-images/logo-small.png" style="height: 100px; width:150px; margin-top: 80px;">`

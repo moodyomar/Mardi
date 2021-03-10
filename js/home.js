@@ -16,7 +16,9 @@ h3s = document.querySelectorAll('.sponsorCard h3')
 
 // ----- Functions -----
 function scrollToGallery() {
+
     galleryH2.scrollIntoView()
+    
 }
 
 const delayElements = function (e, t) {

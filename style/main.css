@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     /* border: 1px solid #f00 !important; */
 }
 
@@ -33,11 +34,13 @@ button {
     font-family: var(--frss);
     outline: none;
     cursor: pointer;
+    transition: all 0.3s linear;
 }
 
 button:hover {
     color: var(--pc);
     background-color: var(--wc);
+    transition: all 0.3s linear;
 }
 
 button:active {
@@ -1071,5 +1074,7 @@ footer p {
     .whenMardi p {
         margin-bottom: 25%;
     }
-
+.footerAbout img{
+    margin-top: 20px;
+}
 }
