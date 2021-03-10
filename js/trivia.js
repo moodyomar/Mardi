@@ -1,11 +1,14 @@
 // Global Vars If Needed
+var livesUpdates = 4;
 var cAnswer = ''
 var scoreUpdated = 00;
 
 
 
+
 // ----- D O M -----   
 const score = document.querySelector('.score');
+const lives = document.querySelector('.lives');
 const start = document.querySelector('.start');
 const question = document.querySelector('.question');
 const answer1 = document.querySelector('.answer1');
@@ -95,20 +98,18 @@ answers.forEach(answer => {
 
 
 const nextQuestion = function () {
-   
+
     scoreUpdated += 10;
     score.innerText = scoreUpdated
     randomQuestion()
-    console.log(`
-           nextQuestion => \n cAnswer: ${cAnswer} \n scoreUpdated: ${scoreUpdated}
-            `)
-
 }
 
 const gameOver = function () {
   
     scoreUpdated = 0;
+    livesUpdates = 4;
     score.innerText = '00'
+    lives.innerText = '04';
    answers.forEach(answer => {answer.style.color = 'black'})
    alert('Game Over')
 }
@@ -116,11 +117,10 @@ const gameOver = function () {
 const wrongAnswer = function (answer) {
     answer.style.color = 'red'
     scoreUpdated -= 5;
-    score.innerText = scoreUpdated
-    console.log(`
-    wrongAnswer => \n cAnswer: ${cAnswer} \n scoreUpdated: ${scoreUpdated}
-     `)
-    if (scoreUpdated <= 0) {
+    livesUpdates -=1
+    score.innerText = scoreUpdated;
+    lives.innerText = livesUpdates;
+    if (scoreUpdated <= 0 || livesUpdates <= 0) {
         gameOver()
         console.log('gameover Triggered')
     }

@@ -11,8 +11,8 @@ body {
 .container {
     width: 85vw;
     min-height: 80vh;
+    padding: 5%;
     margin: 10vh auto;
-    padding: 50px;
     background-color: #fff;
     position: relative;
     display: grid;
@@ -23,14 +23,13 @@ body {
     "answer1 answer2"
     "answer3 answer4"
     "start start"
-    "score score"
+    "score lives"
     ;
-    gap: 30px
     
 }
 
 .answer,
-.score {
+.score,.lives {
     font-family: var(--frss);
     font-size: 1.5em;
     letter-spacing: 2px;
@@ -47,9 +46,12 @@ body {
 .score {
     grid-area: score;
     align-self: flex-end;
-    margin-left: 5%;
-
-
+    justify-self: flex-start;
+}
+.lives{
+    grid-area: lives;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 .question {
@@ -63,6 +65,7 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 65px;
+    line-height: 60px;
     background-color: var(--yc);
     border-radius: 5px;
     opacity: 0.8;
@@ -100,10 +103,17 @@ body {
     .container {
         width: 70%;
         height: 60%;
+        gap: 30px
     }
 }
 @media (min-width:1000px){
-
+    .container {
+        width: 65vw;
+        height: 65vh;
+        margin: 10vh auto;
+        background-color: var(--wc);
+        gap: 60px
+    }
 }
 
 @media (max-width: 750px) {
@@ -111,19 +121,15 @@ body {
         width: 85vw;
         min-height: 80vh;
         margin: 10vh auto;
-        padding: 15px;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            "question"
-            "answer1"
-            "answer2"
-            "answer3"
-            "answer4"
-            "start"
-            "score"
-        ;
-        gap: 25px
-        
+            "question question"
+            "answer1 answer1"
+            "answer2 answer2"
+            "answer3 answer3"
+            "answer4 answer4"
+            "start start"
+            "score lives";
     }
 
     .answer,
@@ -132,7 +138,6 @@ body {
         font-size: 1.2em;
         letter-spacing: 1.5px;
     }
-
     .question {
         font-size: 1.6em;
     }
