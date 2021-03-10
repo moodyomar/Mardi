@@ -84,14 +84,8 @@ answers.forEach(answer => {
     answer.addEventListener('click', () => {
         if (answer.innerText == cAnswer) {
             nextQuestion()
-            console.log(`if =>
-            cAnswer: ${cAnswer} \n answer: ${answer}
-            `)
         } else {
             wrongAnswer(answer)
-            console.log(`else =>
-            cAnswer: ${cAnswer} \n answer: ${answer}
-            `)
         }
     })
 })
@@ -141,13 +135,12 @@ const fadeIn = function (e, t = 2) {
 
 
 // ----- Functions Excution -----
+
+//  + JQuery animations
+$("document").ready(function () {
+$('.question').hide().fadeIn(1500)
 slideLeft(answer1, 1)
 slideLeft(answer3, 1)
 slideRight(answer2, 1)
 slideRight(answer4, 1)
-
-
-// JQuery - Section Title animation
-$("document").ready(function () {
-$('.question').hide().fadeIn(1000)
 })
