@@ -89,6 +89,9 @@ answers.forEach(answer => {
         }
     })
 })
+start.addEventListener('click', () => {
+    window.close()
+})
 
 
 const nextQuestion = function () {
