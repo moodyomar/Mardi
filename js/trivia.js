@@ -22,8 +22,8 @@ const trivia = [{
     correctAnswer: "Fat Tuesday"
 }, {
     question: "What states recognize Fat Tuesday as a holiday ?",
-    answers: ["California, Los Angelos", "Texas", "North Dakota", "Louisiana, Florida Alabama"],
-    correctAnswer: "Louisiana, Florida Alabama"
+    answers: ["California, Los Angelos", "Texas", "North Dakota", "Louisiana, Alabama"],
+    correctAnswer: "Louisiana, Alabama"
 }, {
     question: "What does gold signify during Mardi Gras ?",
     answers: ["Education", "Power", "Family", "Sickness"],
@@ -34,7 +34,7 @@ const trivia = [{
     correctAnswer: "Absolutely not"
 }, {
     question: "What does purple signify during Mardi Gras?",
-    answers: ["Color", "Justice", "Love", "Peace four"],
+    answers: ["Invisibility", "Justice", "Love", "Peace"],
     correctAnswer: "Justice"
 }, {
     question: "Who is the mayor of New Orleans Now? ?",
@@ -46,7 +46,7 @@ const trivia = [{
     correctAnswer: "If I Cease to Love"
 }, {
     question: "Bacchus is the Roman god of what ?",
-    answers: ["Nature", "Wine", "Water", "Money & Power"],
+    answers: ["Nature", "Power", "Water", "Wine"],
     correctAnswer: "Wine"
 }, {
     question: "Where was the first known carnival celebration ?",

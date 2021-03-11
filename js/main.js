@@ -26,7 +26,9 @@ const randomBackground = function (bg) {
     bg.style.minHeight = "60vh"
 
 }
-
+document.querySelector('.aboutUs img').addEventListener('click', () => {
+    window.open('trivia.html', "", "width=800,height=800")
+})
 
 
 
@@ -77,7 +79,7 @@ $("document").ready(function () {
             opacity: '1'
         }, "slow");
 
-        
+
     sectionTitle.on('mouseenter', function () {
         sectionTitle.animate({
                 width: '+=60px'
