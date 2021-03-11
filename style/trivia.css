@@ -231,7 +231,7 @@ font-size: 2.5em;
     }
 }
 
-@keyframes slideLeft {
+@keyframes slidLeft {
     from {
         opacity: 0;
         transform: translateX(-300px);

@@ -163,11 +163,11 @@ const wrongAnswer = function (answer) {
 }
 
 const slideLeft = function (e, t = 2) {
-    e.style.animation = `slideLeft ${t}s ease`
+    e.style.animation = `slidLeft ${t}s ease`
 }
 
 const slideRight = function (e, t = 2) {
-    // e.style.animation = `slideRight ${t}s ease`
+    e.style.animation = `slideRight ${t}s ease`
 }
 const fadeIn = function (e, t = 2) {
     e.style.animation = `fadeIn ${t}s ease`
