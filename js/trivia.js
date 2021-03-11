@@ -17,45 +17,45 @@ const answer3 = document.querySelector('.answer3');
 const answer4 = document.querySelector('.answer4');
 const answers = document.querySelectorAll('.answer');
 const trivia = [{
-    question: "What is Mardi Gras ?",
-    answers: ["hfghfgh one", "Mardi Gras", "sdfsdf three", "answer four"],
-    correctAnswer: "Mardi Gras"
+    question: "What other names there is for Mardi Gras ?",
+    answers: ["Fat Tuesday", " Lazy Sunday", "Tiny Saturday", "Sweet Friday"],
+    correctAnswer: "Fat Tuesday"
 }, {
-    question: "How much does it cost to enter ?",
-    answers: ["jkyhfg one", "Gras Mardi", "answrtyrtyer three", "uykyterg four"],
-    correctAnswer: "Gras Mardi"
+    question: "What states recognize Fat Tuesday as a holiday ?",
+    answers: ["California, Los Angelos", "Texas", "North Dakota", "Louisiana, Florida Alabama"],
+    correctAnswer: "Louisiana, Florida Alabama"
 }, {
-    question: "Where is Mardi Gras ?",
-    answers: ["hjkjkh one", "Holy Mary", "gdfdf three", "iolli four"],
-    correctAnswer: "Holy Mary"
+    question: "What does gold signify during Mardi Gras ?",
+    answers: ["Education", "Power", "Family", "Sickness"],
+    correctAnswer: "Power"
 }, {
-    question: "when is Mardi Gras ?",
-    answers: ["sdsdccs one", "Magic", "bvcfggfh three", "gngf four"],
-    correctAnswer: "Magic"
+    question: " Is New Orleans the only place Mardi Gras is celebrated ?",
+    answers: ["Absolutely not", "Of Course", "Florida As Well", "New York As Well"],
+    correctAnswer: "Absolutely not"
 }, {
-    question: "Who started Mardi Gras ?",
-    answers: ["nngfhfhg one", "Spell", "jtgjhfgh three", "mjgdf four"],
-    correctAnswer: "Spell"
+    question: "What does purple signify during Mardi Gras?",
+    answers: ["Color", "Justice", "Love", "Peace four"],
+    correctAnswer: "Justice"
 }, {
     question: "Who is the mayor of New Orleans Now? ?",
-    answers: ["fssd one", "Snake", "sdfdfsas three", "dsdsf four"],
-    correctAnswer: "Snake"
+    answers: ["Adam Sandler", "LaToya Cantrell", "Ashton Kutcher", "Jennifer Lopez"],
+    correctAnswer: "LaToya Cantrell"
 }, {
-    question: "What is the most common colors in Mardi Gras ?",
-    answers: ["jghjgh one", "Binky", "kuyjkhfgh three", "xcvdgf four"],
-    correctAnswer: "Binky"
+    question: "What song is the anthem of Mardi Gras in New Orleans ?",
+    answers: ["Back in Black", "High Way to Hell", "Thunder", "If I Cease to Love"],
+    correctAnswer: "If I Cease to Love"
 }, {
-    question: "How long does Mardi Gras last ?",
-    answers: ["zxczc one", "Moody", "sddsfrew three", "sdgytr four"],
-    correctAnswer: "Moody"
+    question: "Bacchus is the Roman god of what ?",
+    answers: ["Nature", "Wine", "Water", "Money & Power"],
+    correctAnswer: "Wine"
 }, {
-    question: "Who is welcomed to Mardi Gras ?",
-    answers: ["gfddfg one", "Everyone", "fsdfsd three", "kyutr four"],
-    correctAnswer: "Everyone"
+    question: "Where was the first known carnival celebration ?",
+    answers: ["Nice, France", "Big Asia", "Far Australia ", "Great Cambodia"],
+    correctAnswer: "Nice, France"
 }, {
-    question: "When was the last Mardi Gras ?",
-    answers: ["weqeq one", "March 2020", "ytjjfd three", "answer four"],
-    correctAnswer: "March 2020"
+    question: "What day comes after Mardi Gras ?",
+    answers: ["Lame Monday", "Ash Wednesday", "Good Thursday", "Lazy Sunday"],
+    correctAnswer: "Ash Wednesday"
 }]
 
 
@@ -105,7 +105,7 @@ const gameOver = function () {
     score.innerText = '00'
     lives.innerText = '04';
    answers.forEach(answer => {answer.style.color = 'black'})
-   alert('Game Over')
+   alert('Game Over! Your score: ',scoreUpdated)
 }
 
 const wrongAnswer = function (answer) {

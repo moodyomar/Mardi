@@ -104,6 +104,12 @@ body {
         height: 60%;
         gap: 30px
     }
+    .answer,
+    .score {
+        font-family: var(--frss);
+        font-size: 1em;
+        letter-spacing: 1.5px;
+    }
 }
 @media (min-width:1000px){
     .container {
@@ -132,9 +138,9 @@ body {
     }
 
     .answer,
-    .score {
+    .score,.lives {
         font-family: var(--frss);
-        font-size: 1.2em;
+        font-size: 1.5em;
         letter-spacing: 1.5px;
     }
     .question {
@@ -149,7 +155,7 @@ body {
     }
 
     to {
-        opacity: 1;
+        opacity: 0.6;
         transform: translateX(0px);
     }
 }
@@ -162,7 +168,7 @@ body {
     }
 
     to {
-        opacity: 1;
+        opacity: 0.6;
         transform: translateX(0px);
     }
 }
