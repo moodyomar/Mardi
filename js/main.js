@@ -49,7 +49,7 @@ burgerMenu.addEventListener('click', () => {
 })
 
 triviaWidget.addEventListener('click', () => {
-    window.open('trivia.html', "", "width=800,height=800")
+    window.open('trivia.html', "", "width=850,height=800")
 })
 
 

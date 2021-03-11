@@ -118,11 +118,14 @@ p {
     opacity: 0.5;
     font-size: 3.5em;
     transition: all 0.3s ease-in;
+    color: var(--gc);
 }
 .triviaWidget:hover{
     opacity: 1;
-    font-size: 4em;
+    /* font-size: 4em; */
+    transform: scale(1.25);
     transition: all 0.3s ease-out;
+    color: var(--yc);
 }
 
 /* -------------------- (SECTION 1) -------------------- */

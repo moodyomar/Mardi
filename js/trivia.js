@@ -126,7 +126,7 @@ const showScoreChange = function (score) {
 
 const gameOver = function (passedScore) {
     scoreBoard.style.display = 'block'
-    scoreBoard.innerHTML = `GAME OVER!<br> Your Score is : <span style="color: blue;"> ${passedScore}</span><br> Thank you for your time.<br>Have a great day!`
+    scoreBoard.innerHTML = `GAME OVER!<br> Your Score is : <span style="color: blue;"> ${passedScore}</span><br> Lives Left : <span style="color: blue;"> ${livesUpdates}</span><br>Thank you for your time.<br>Have a great day!`
     scoreUpdated = 0;
     livesUpdates = 4;
     score.innerText = '00'
