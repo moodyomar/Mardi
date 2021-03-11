@@ -71,7 +71,8 @@ answers.forEach(answer => {
         if (answer.innerText == cAnswer) {
             answer.style.opacity = 1
             setTimeout(() => {
-                answer.style.color = 'green'
+                // answer.style.color = 'green'
+                answer.style.backgroundColor = 'var(--gc)'
             },300)
             setTimeout(() => {
                 
@@ -97,6 +98,7 @@ shuffle.addEventListener('click', () => {
 const randomQuestion = function () {
     answers.forEach(answer => {
         answer.style.color = 'black'
+        answer.style.backgroundColor = 'var(--wc)'
         answer.style.opacity = 0.6
     })
 
@@ -148,7 +150,7 @@ const gameOver = function (passedScore) {
 }
 
 const wrongAnswer = function (answer) {
-    answer.style.color = 'red';
+    answer.style.backgroundColor = '#bf3f3f'
     answer.style.opacity = 1
     showScoreChange(minusFive)
     scoreUpdated -= 5;
