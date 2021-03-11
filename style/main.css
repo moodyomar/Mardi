@@ -122,7 +122,6 @@ p {
 }
 .triviaWidget:hover{
     opacity: 1;
-    /* font-size: 4em; */
     transform: scale(1.25);
     transition: all 0.3s ease-out;
     color: var(--yc);
@@ -139,7 +138,7 @@ p {
 }
 
 .logo img {
-    width: 85px;
+    width: 80px;
     height: 10%
 }
 
@@ -862,6 +861,10 @@ footer p {
 @media (max-width: 750px) {
 
     /* -- Responsive for Nav  -- */
+    .logo img {
+        width: 70px;
+        height: 70px
+    }
     .navLinks {
         position: absolute;
         right: 0;
@@ -1076,7 +1079,7 @@ footer p {
 
 
 /* VERY SMALL SCREENS */
-@media (max-width: 414px) {
+@media (max-width: 413px) {
 
     .sponsorsSection {
         display: flex;
