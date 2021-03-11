@@ -147,7 +147,7 @@ display: none;
         gap: 30px
     }
     .answer,
-    .shuffle {
+    .score,.shuffle {
         font-family: var(--frss);
         font-size: 1em;
         letter-spacing: 1.5px;
@@ -206,18 +206,6 @@ font-size: 2.5em;
     }
 }
 
-@keyframes slideLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-300px);
-    }
-
-    to {
-        opacity: 0.6;
-        transform: translateX(0px);
-    }
-}
-
 
 @keyframes showScore {
     from {
@@ -240,6 +228,18 @@ font-size: 2.5em;
     to {
         opacity: 0;
         transform: scale(1);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    to {
+        opacity: 0.6;
+        transform: translateX(0px);
     }
 }
 

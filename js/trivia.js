@@ -69,7 +69,15 @@ const trivia = [{
 answers.forEach(answer => {
     answer.addEventListener('click', () => {
         if (answer.innerText == cAnswer) {
-            nextQuestion()
+            answer.style.opacity = 1
+            setTimeout(() => {
+                answer.style.color = 'green'
+            },300)
+            setTimeout(() => {
+                
+                nextQuestion()
+            },600)
+            
         } else {
             wrongAnswer(answer)
         }
@@ -89,6 +97,7 @@ shuffle.addEventListener('click', () => {
 const randomQuestion = function () {
     answers.forEach(answer => {
         answer.style.color = 'black'
+        answer.style.opacity = 0.6
     })
 
     let rndQuestions = Math.floor(Math.random() * trivia.length)
@@ -132,13 +141,15 @@ const gameOver = function (passedScore) {
     score.innerText = '00'
     lives.innerText = '04';
     answers.forEach(answer => {
-        answer.style.color = 'black'
+        answer.style.color = 'black';
+        // answer.style.opacity = 0.6
     })
 
 }
 
 const wrongAnswer = function (answer) {
-    answer.style.color = 'red'
+    answer.style.color = 'red';
+    answer.style.opacity = 1
     showScoreChange(minusFive)
     scoreUpdated -= 5;
     livesUpdates -= 1
@@ -156,7 +167,7 @@ const slideLeft = function (e, t = 2) {
 }
 
 const slideRight = function (e, t = 2) {
-    e.style.animation = `slideRight ${t}s ease`
+    // e.style.animation = `slideRight ${t}s ease`
 }
 const fadeIn = function (e, t = 2) {
     e.style.animation = `fadeIn ${t}s ease`
