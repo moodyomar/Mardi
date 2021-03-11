@@ -110,15 +110,20 @@ p {
 
 
 .triviaWidget{
-    position: absolute;
-    z-index: 15;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background-color: var(--gc);
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    margin: 0px 10px 10px 0px;
+    right: 0;
+    opacity: 0.5;
+    font-size: 3.5em;
+    transition: all 0.3s ease-in;
 }
-
+.triviaWidget:hover{
+    opacity: 1;
+    font-size: 4em;
+    transition: all 0.3s ease-out;
+}
 
 /* -------------------- (SECTION 1) -------------------- */
 

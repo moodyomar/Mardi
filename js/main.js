@@ -14,7 +14,8 @@ const navLinksLi = document.querySelectorAll('.navLinks li');
 const headerContainer = document.querySelector('.headerContainer')
 const sectionTitle = $('.SectionTitle h2')
 const headerTitle = $('.headerTitle h1')
-const blackOverlay = document.querySelector('.blackOverlay')
+const blackOverlay = document.querySelector('.blackOverlay');
+const triviaWidget = document.querySelector('.triviaWidget');
 
 
 // ----- Functions -----
@@ -26,9 +27,7 @@ const randomBackground = function (bg) {
     bg.style.minHeight = "60vh"
 
 }
-document.querySelector('.aboutUs img').addEventListener('click', () => {
-    window.open('trivia.html', "", "width=800,height=800")
-})
+
 
 
 
@@ -49,6 +48,9 @@ burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('toggle');
 })
 
+triviaWidget.addEventListener('click', () => {
+    window.open('trivia.html', "", "width=800,height=800")
+})
 
 
 // ----- Functions Excution -----

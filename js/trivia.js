@@ -8,8 +8,12 @@ var scoreUpdated = 00;
 
 // ----- D O M -----   
 const score = document.querySelector('.score');
+const scoreBoard = document.querySelector('.scoreBoard');
 const lives = document.querySelector('.lives');
 const start = document.querySelector('.start');
+const shuffle = document.querySelector('.shuffle');
+const minusFive = document.querySelector('.minusFive');
+const plusTen = document.querySelector('.plusTen');
 const question = document.querySelector('.question');
 const answer1 = document.querySelector('.answer1');
 const answer2 = document.querySelector('.answer2');
@@ -38,7 +42,7 @@ const trivia = [{
     correctAnswer: "Justice"
 }, {
     question: "Who is the mayor of New Orleans Now? ?",
-    answers: ["Adam Sandler", "LaToya Cantrell", "Ashton Kutcher", "Jennifer Lopez"],
+    answers: ["LaToya Cantrell", "Adam Sandler", "Ashton Kutcher", "Jennifer Lopez"],
     correctAnswer: "LaToya Cantrell"
 }, {
     question: "What song is the anthem of Mardi Gras in New Orleans ?",
@@ -50,7 +54,7 @@ const trivia = [{
     correctAnswer: "Wine"
 }, {
     question: "Where was the first known carnival celebration ?",
-    answers: ["Nice, France", "Big Asia", "Far Australia ", "Great Cambodia"],
+    answers: ["Far Australia", "Big Asia", "Nice, France", "Great Cambodia"],
     correctAnswer: "Nice, France"
 }, {
     question: "What day comes after Mardi Gras ?",
@@ -59,25 +63,7 @@ const trivia = [{
 }]
 
 
-// ----- Functions -----
 
-const randomQuestion = function () {
-    answers.forEach(answer => {answer.style.color = 'black'})
-
-    let rndQuestions = Math.floor(Math.random() * trivia.length)
-    let rndQuestion = trivia[rndQuestions].question;
-    let questionAnswer = trivia[rndQuestions].answers;
-    let correctAnswer = trivia[rndQuestions].correctAnswer;
-    
-    
-    question.innerText = rndQuestion
-    answer1.innerText = questionAnswer[0]
-    answer2.innerText = questionAnswer[3]
-    answer3.innerText = questionAnswer[2]
-    answer4.innerText = questionAnswer[1]
-    cAnswer = correctAnswer;
-}
-randomQuestion()
 
 // ----- Event Listerers -----
 answers.forEach(answer => {
@@ -93,35 +79,76 @@ start.addEventListener('click', () => {
     window.close()
 })
 
+shuffle.addEventListener('click', () => {
+    randomQuestion()
+})
+
+
+// ----- Functions -----
+
+const randomQuestion = function () {
+    answers.forEach(answer => {
+        answer.style.color = 'black'
+    })
+
+    let rndQuestions = Math.floor(Math.random() * trivia.length)
+    let rndQuestion = trivia[rndQuestions].question;
+    let questionAnswer = trivia[rndQuestions].answers;
+    let correctAnswer = trivia[rndQuestions].correctAnswer;
+
+
+    question.innerText = rndQuestion
+    answer1.innerText = questionAnswer[0]
+    answer2.innerText = questionAnswer[3]
+    answer3.innerText = questionAnswer[2]
+    answer4.innerText = questionAnswer[1]
+    cAnswer = correctAnswer;
+}
+randomQuestion()
 
 const nextQuestion = function () {
-
+    showScoreChange(plusTen)
     scoreUpdated += 10;
     score.innerText = scoreUpdated
-    randomQuestion()
+    if (scoreUpdated >= 100) {
+        gameOver(scoreUpdated)
+    } else {
+        randomQuestion()
+    }
 }
 
-const gameOver = function () {
-  
+const showScoreChange = function (score) {
+    score.style.display = 'block'
+    setTimeout(() => {
+        score.style.display = 'none'
+    }, 350)
+}
+
+const gameOver = function (passedScore) {
+    scoreBoard.style.display = 'block'
+    scoreBoard.innerHTML = `GAME OVER!<br> Your Score is : <span style="color: blue;"> ${passedScore}</span><br> Thank you for your time.<br>Have a great day!`
     scoreUpdated = 0;
     livesUpdates = 4;
     score.innerText = '00'
     lives.innerText = '04';
-   answers.forEach(answer => {answer.style.color = 'black'})
-   alert('Game Over! Your score: ',scoreUpdated)
+    answers.forEach(answer => {
+        answer.style.color = 'black'
+    })
+
 }
 
 const wrongAnswer = function (answer) {
     answer.style.color = 'red'
+    showScoreChange(minusFive)
     scoreUpdated -= 5;
-    livesUpdates -=1
+    livesUpdates -= 1
     score.innerText = scoreUpdated;
     lives.innerText = livesUpdates;
-    if (scoreUpdated <= 0 || livesUpdates <= 0) {
-        gameOver()
-        console.log('gameover Triggered')
+    if (scoreUpdated <= 0) {
+        gameOver(scoreUpdated)
+    } else if (livesUpdates <= 0) {
+        gameOver(scoreUpdated)
     }
-
 }
 
 const slideLeft = function (e, t = 2) {
@@ -141,9 +168,9 @@ const fadeIn = function (e, t = 2) {
 
 //  + JQuery animations
 $("document").ready(function () {
-$('.question').hide().fadeIn(1500)
-slideLeft(answer1, 1)
-slideLeft(answer3, 1)
-slideRight(answer2, 1)
-slideRight(answer4, 1)
+    $('.question').hide().fadeIn(1500)
+    slideLeft(answer1, 1)
+    slideLeft(answer3, 1)
+    slideRight(answer2, 1)
+    slideRight(answer4, 1)
 })

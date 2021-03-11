@@ -16,19 +16,37 @@ body {
     position: relative;
     display: grid;
     border-radius: 5px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-    "question question"
-    "answer1 answer2"
-    "answer3 answer4"
-    "start start"
-    "score lives"
+    "question question question question" 
+    "answer1 answer1 answer2 answer2"
+    "answer3 answer3 answer4 answer4"
+    "start start start start"
+    "score suffle shuffle lives"
     ;
-    
+}
+
+.minusFive,.plusTen{
+position: absolute;
+bottom: 0;
+margin-bottom: 50px;
+margin-left: 50px;
+font-size: 4em;
+font-weight: 600;
+opacity: 0.7;
+display: none;
+}
+.minusFive{
+    color: red;
+    transition: all 0.5s ease-in;
+}
+.plusTen{
+    color: green;
+    transition: all 0.5s ease-in;
 }
 
 .answer,
-.score,.lives {
+.score,.lives,.shuffle {
     font-family: var(--frss);
     font-size: 1.5em;
     letter-spacing: 2px;
@@ -40,6 +58,7 @@ body {
     width: 70%;
     justify-self: center;
     align-self: flex-end;
+    z-index: 11;
 }
 
 .score {
@@ -47,17 +66,45 @@ body {
     align-self: flex-end;
     justify-self: flex-start;
 }
+.scoreBoard{
+    background-color: var(--wc);
+    z-index: 10;
+    border-radius: 5px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+    font-family: var(--frss);
+    display: grid;
+    display: none;
+    text-align: center;
+    line-height: 3;
+}
 .lives{
     grid-area: lives;
     align-self: flex-end;
     justify-self: flex-end;
+}
+.shuffle{
+    grid-column: 2/4;
+    grid-row: 5;
+    align-self: flex-end;
+    background: var(--bc);
+    color: var(--wc);
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
 }
 
 .question {
     grid-area: question;
     justify-self: center;
     font-family: var(--fp);
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .answer {
@@ -100,7 +147,7 @@ body {
         gap: 30px
     }
     .answer,
-    .score {
+    .score,.shuffle {
         font-family: var(--frss);
         font-size: 1em;
         letter-spacing: 1.5px;
@@ -127,25 +174,35 @@ body {
         width: 85vw;
         min-height: 70vh;
         margin: 10vh auto;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "question question"
-            "answer1 answer1"
-            "answer2 answer2"
-            "answer3 answer3"
-            "answer4 answer4"
-            "start start"
-            "score lives";
+            "question question question"
+            "answer1 answer1 answer1"
+            "answer2 answer2 answer2"
+            "answer3 answer3 answer3"
+            "answer4 answer4 answer4"
+            "start start start"
+            "score shuffle lives";
     }
 
     .answer,
-    .score,.lives {
+    .score,.lives,.shuffle {
         font-family: var(--frss);
         font-size: 1.5em;
         letter-spacing: 1.5px;
     }
     .question {
-        font-size: 1.6em;
+        font-size: 1.5em;
+    }
+    .shuffle{
+        grid-column: 2;
+        grid-row: 7;
+        
+    }
+    .minusFive,.plusTen{
+margin-left: 15px;
+margin-bottom: 50px;
+font-size: 2.5em;
     }
 }
 
@@ -162,6 +219,31 @@ body {
 }
 
 
+@keyframes showScore {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.7;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes hideScore {
+    from {
+        opacity: 0.7;
+        transform: scale(1.5);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
 @keyframes slideRight {
     from {
         opacity: 0;
@@ -174,15 +256,3 @@ body {
     }
 }
 
-
-.triviaWidget{
-    position: absolute;
-    z-index: 15;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    opacity: 0.5;
-    background-color: var(--gc);
-}
