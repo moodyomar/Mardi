@@ -1,9 +1,6 @@
-/* --- Main Scripts And Element --- */
-
-
-
 // Global Vars If Needed
 let flag = false;
+
 
 
 

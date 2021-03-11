@@ -177,8 +177,6 @@ const fadeIn = function (e, t = 2) {
 
 
 
-// ----- Functions Excution -----
-
 //  + JQuery animations
 $("document").ready(function () {
     $('.question').hide().fadeIn(1500)

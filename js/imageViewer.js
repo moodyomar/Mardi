@@ -5,7 +5,6 @@ const $popup = $('.popup')
 const showImage = function(image){
     $popupOverlay.fadeIn(500)
     $popup.html(`<img src="${image.src}" alt="Mardi Gras Glllery Photo" >`)
-    
 }
 
 
@@ -18,4 +17,3 @@ $galleryimages.each((index, image) => {
 $popupOverlay.on('click', () => {
     $popupOverlay.fadeOut(200)
 })
-
