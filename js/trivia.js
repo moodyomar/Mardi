@@ -1,5 +1,5 @@
 // Global Vars If Needed
-var livesUpdates = 4;
+var livesUpdates = 3;
 var cAnswer = ''
 var scoreUpdated = 00;
 
@@ -128,7 +128,7 @@ const gameOver = function (passedScore) {
     scoreBoard.style.display = 'block'
     scoreBoard.innerHTML = `GAME OVER!<br> Your Score is : <span style="color: blue;"> ${passedScore}</span><br> Lives Left : <span style="color: blue;"> ${livesUpdates}</span><br>Thank you for your time.<br>Have a great day!`
     scoreUpdated = 0;
-    livesUpdates = 4;
+    livesUpdates = 3;
     score.innerText = '00'
     lives.innerText = '04';
     answers.forEach(answer => {
