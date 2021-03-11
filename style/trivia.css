@@ -124,7 +124,7 @@ body {
 @media (max-width: 750px) {
     .container {
         width: 85vw;
-        min-height: 80vh;
+        min-height: 70vh;
         margin: 10vh auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
