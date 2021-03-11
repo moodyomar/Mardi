@@ -132,7 +132,7 @@ const showScoreChange = function (score) {
     score.style.display = 'block'
     setTimeout(() => {
         score.style.display = 'none'
-    }, 350)
+    }, 400)
 }
 
 const gameOver = function (passedScore) {
@@ -141,7 +141,7 @@ const gameOver = function (passedScore) {
     scoreUpdated = 0;
     livesUpdates = 3;
     score.innerText = '00'
-    lives.innerText = '04';
+    lives.innerText = '03';
     answers.forEach(answer => {
         answer.style.color = 'black';
         // answer.style.opacity = 0.6
