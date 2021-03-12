@@ -81,32 +81,6 @@ p {
     --bc: #0d0d0d;
 }
 
-/* Underline animation on nav links */
-.underline {
-    display: inline;
-    position: relative;
-    overflow: hidden;
-}
-
-.underline:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: -5px;
-    background: var(--pc);
-    height: 5px;
-    transition-property: left right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-}
-
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
-    right: 0;
-}
 
 
 .triviaWidget{
@@ -688,6 +662,33 @@ footer p {
 
 /* ---------- Biggest Screen -----------  */
 @media (min-width: 1100px) {
+/* Underline animation on nav links */
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
+
+.underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: var(--pc);
+    height: 5px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+    right: 0;
+}
+
     .navLinks {
         width: 40%;
     }
