@@ -119,6 +119,7 @@ p {
     font-size: 3.5em;
     transition: all 0.3s ease-in;
     color: var(--gc);
+    cursor: pointer;
 }
 .triviaWidget:hover{
     opacity: 1;

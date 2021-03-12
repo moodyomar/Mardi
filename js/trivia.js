@@ -1,3 +1,6 @@
+// Proudly build by moody from 0
+// not a single line used from the web
+
 // Global Vars If Needed
 var livesUpdates = 3;
 var cAnswer = ''
@@ -54,8 +57,8 @@ const trivia = [{
     correctAnswer: "Wine"
 }, {
     question: "Where was the first known carnival celebration ?",
-    answers: ["Far Australia", "Big Asia", "Nice, France", "Great Cambodia"],
-    correctAnswer: "Nice, France"
+    answers: ["Far Australia", "Big Asia", "Nice France", "Great Cambodia"],
+    correctAnswer: "Nice France"
 }, {
     question: "What day comes after Mardi Gras ?",
     answers: ["Lame Monday", "Ash Wednesday", "Good Thursday", "Lazy Sunday"],
@@ -73,12 +76,12 @@ answers.forEach(answer => {
             setTimeout(() => {
                 // answer.style.color = 'green'
                 answer.style.backgroundColor = 'var(--gc)'
-            },300)
+            }, 300)
             setTimeout(() => {
-                
+
                 nextQuestion()
-            },600)
-            
+            }, 600)
+
         } else {
             wrongAnswer(answer)
         }
