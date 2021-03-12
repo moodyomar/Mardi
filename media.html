@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/b02f1d8bbe.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     <script src="js/main.js" defer></script>
+    <script src="js/media.js" defer></script>
     <script src="js/imageViewer.js" defer></script>
 
 </head>
@@ -100,8 +101,71 @@
 
         </div>
     </div>
+<!-- light box -->
+<div class="row">
+    <div class="column">
+      <img src="images/site-images/img10.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="images/site-images/img11.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="images/site-images/img1.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="images/site-images/img13.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/site-images/img10.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/site-images/img11.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/site-images/img1.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/site-images/img13.jpg" style="width:100%">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+  
+      <div class="column">
+        <img class="demo cursor" src="images/site-images/img10.jpg" style="width:100%" onclick="currentSlide(1)" alt="Mardi Gras Celebration">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/site-images/img11.jpg" style="width:100%" onclick="currentSlide(2)" alt="When I say Mardi You Say Gras">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/site-images/img1.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Atmosphere in Mardi Gras">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/site-images/img13.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mardi Gras Here and There">
+      </div>
+    </div>
+  </div>
+<!-- end light box -->
 
-    <div class="gallery">
+    <!-- <div class="gallery">
         <div class="gallery-item">
             <img class="gallery-image" src="images/site-images/img10.jpg" alt="Image description">
         </div>
@@ -133,7 +197,7 @@
         <div class="gallery-item">
             <img class="gallery-image" src="images/site-images/img24.jpg" alt="Image description">
         </div>
-    </div>
+    </div> -->
 
     <div class="SectionTitle">
         <h2>Videos</h2>

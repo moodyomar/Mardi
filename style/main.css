@@ -307,10 +307,7 @@ h5 {
     transition: all 0.3s ease-out;
 }
 
-.gallery-image:hover {
-    transform: scale(1.3);
-    transition: all 0.3s ease-out;
-}
+
 
 
 
@@ -751,6 +748,10 @@ footer p {
 
     .mediaSection {
         margin: 0px 10%;
+    }
+    .gallery-image:hover {
+        transform: scale(1.3);
+        transition: all 0.3s ease-out;
     }
 
     button {
