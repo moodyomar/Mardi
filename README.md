@@ -1,6 +1,6 @@
 # Mardi-Gras
  study Project
-
+Live website on Netlify : https://mamardi.netlify.app/
 <!-- So hovering obviously dont work in mobile only desktop. 
 
 !IMPORTANT
