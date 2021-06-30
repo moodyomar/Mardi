@@ -153,6 +153,9 @@ const gameOver = function (passedScore) {
 }
 
 const wrongAnswer = function (answer) {
+  if(scoreUpdated == 0){
+    scoreUpdated += 6;
+  }
     answer.style.backgroundColor = '#bf3f3f'
     answer.style.opacity = 1
     showScoreChange(minusFive)
